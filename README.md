@@ -24,7 +24,15 @@ O desafio deve ser enviado [AQUI](https://docs.google.com/forms/d/e/1FAIpQLSdZA8
     - Tailwindcss
     - JSON Server
 ### Requisitos Funcionais:  
-- Modal de Transações
+- Página Principal:
+    - [ ] O sistema deve ser uma SPA.
+    - [ ] Deve possuir um botão para cadastrar novas transações.
+    - [ ] Deve possuir um dashboard com 3 categorias: Entradas, Saídas e Saldo.
+    - [ ] Deve apresentar um input para busca.
+    - [ ] Deve apresentar uma lista de transações de acordo com o input de busca. Caso o imput esteja vazio, deve apresentar todas as transações.
+    - [ ] Deve possuir um rodapé com informações do desenvolvedor e finalidade da aplicação.
+- Modal de Transações:
     - [ ] O sistema deve possuir um modal para adicionar transações.
-    - [ ] O sistema deve permitir que usuários consigam aidicional novas transações.
-    - [ ] O sistema deve permitir que usuários consigam cadastrar novas categorias de transações.
+    - [ ] O modal deve permitir que usuários consigam aidicionar novas transações, contendo 'Descrição', 'Preço', 'Categoria' e 'Tipo'.
+    - [ ] O modal deve permitir que usuários consigam cadastrar novas categorias de transações.
+    - [ ] O modal deve possuir um botão com a funcionalidade de submeter a transação.
