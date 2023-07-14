@@ -1,6 +1,5 @@
 # Aplicativo de Finanças Pessoais - IN8
-***
-### Desafio Proposto
+## Desafio Proposto
 
 **Título do projeto:** Aplicativo de Gerenciamento de Finanças Pessoais.  
  
