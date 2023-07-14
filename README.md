@@ -14,3 +14,16 @@
 - Armazenamento local, utilizando o localStorage ou qualquer outra alternativa.  
 
 O desafio deve ser enviado [AQUI](https://docs.google.com/forms/d/e/1FAIpQLSdZA8faSnKPGfW8UH-1XNyluV6VPcGTEdnyP4XmqjlSM1J-Gg/viewform)
+
+## Solução  
+
+### Especificações Técnicas:  
+- Tecnologias Utilizadas:
+    - ReactJS
+    - NextJS 13
+    - Tailwindcss
+    - JSON Server
+### Requisitos Funcionais:  
+- [ ] O sistema deve possuir um modal para adicionar transações.
+    - [ ] O sistema deve permitir que usuários consigam aidicional novas transações.
+    - [ ] O sistema deve permitir que usuários consigam cadastrar novas categorias de transações.
