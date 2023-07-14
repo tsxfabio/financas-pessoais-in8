@@ -25,6 +25,6 @@ O desafio deve ser enviado [AQUI](https://docs.google.com/forms/d/e/1FAIpQLSdZA8
     - JSON Server
 ### Requisitos Funcionais:  
 - Modal de Transações
-- [ ] O sistema deve possuir um modal para adicionar transações.
-- [ ] O sistema deve permitir que usuários consigam aidicional novas transações.
-- [ ] O sistema deve permitir que usuários consigam cadastrar novas categorias de transações.
+    - [ ] O sistema deve possuir um modal para adicionar transações.
+    - [ ] O sistema deve permitir que usuários consigam aidicional novas transações.
+    - [ ] O sistema deve permitir que usuários consigam cadastrar novas categorias de transações.
