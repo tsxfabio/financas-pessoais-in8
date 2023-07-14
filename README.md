@@ -10,4 +10,5 @@
 - Gerenciador de estado.
 - Bibliotecas de UI, como Bootstrap ou Material-UI, ou qualquer outro.  
 - Armazenamento local, utilizando o localStorage ou qualquer outra alternativa.  
+
 ***
