@@ -21,11 +21,10 @@ O desafio deve ser enviado [AQUI](https://docs.google.com/forms/d/e/1FAIpQLSdZA8
 - Tecnologias Utilizadas:
     - ReactJS
     - NextJS 13
-    - Tailwindcss
+    - [Stitches](https://stitches.dev/)
     - JSON Server
 ### Requisitos Funcionais:  
 - Página Principal:
-    - [ ] O sistema deve ser uma SPA.
     - [ ] Deve possuir um botão para cadastrar novas transações.
     - [ ] Deve possuir um dashboard com 3 categorias: Entradas, Saídas e Saldo.
     - [ ] Deve apresentar um input para busca.
