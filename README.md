@@ -16,12 +16,15 @@
 O desafio deve ser enviado [AQUI](https://docs.google.com/forms/d/e/1FAIpQLSdZA8faSnKPGfW8UH-1XNyluV6VPcGTEdnyP4XmqjlSM1J-Gg/viewform)
 
 ## Solução  
+- Referência de Estilo:  
+    - [Webpage da IN8](https://in8.com.br/)
 
 ### Especificações Técnicas:  
 - Tecnologias Utilizadas:
     - ReactJS
     - NextJS 13
     - [Stitches](https://stitches.dev/)
+    - [RadixUI](https://www.radix-ui.com/)
     - JSON Server
 ### Requisitos Funcionais:  
 - Página Principal:
