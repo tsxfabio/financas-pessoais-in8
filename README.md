@@ -25,12 +25,13 @@ O desafio deve ser enviado [AQUI](https://docs.google.com/forms/d/e/1FAIpQLSdZA8
     - NextJS 13
     - [Stitches](https://stitches.dev/)
     - [PrimeReact](https://www.primefaces.org/primereact-v5/)
+    - [Phosphoricons](https://phosphoricons.com/)
     - JSON Server
 ### Requisitos Funcionais:  
 - Página Principal:
-    - [ ] Deve possuir um botão para cadastrar novas transações.
-    - [ ] Deve possuir um dashboard com 3 categorias: Entradas, Saídas e Saldo.
-    - [ ] Deve apresentar um input para busca.
+    - [x] Deve possuir um botão para cadastrar novas transações.
+    - [x] Deve possuir um dashboard com 3 categorias: Entradas, Saídas e Saldo.
+    - [x] Deve apresentar um input para busca.
     - [ ] Deve apresentar uma lista de transações de acordo com o input de busca. Caso o imput esteja vazio, deve apresentar todas as transações.
     - [ ] Deve possuir um rodapé com informações do desenvolvedor e finalidade da aplicação.
 - Modal de Transações:
