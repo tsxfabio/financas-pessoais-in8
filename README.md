@@ -21,12 +21,12 @@ O desafio deve ser enviado [AQUI](https://docs.google.com/forms/d/e/1FAIpQLSdZA8
 
 ### Especificações Técnicas:  
 - Tecnologias Utilizadas:
-    - ReactJS
-    - NextJS 13
+    - [ReactJS](https://react.dev/)
+    - [NextJS 13](https://nextjs.org/)
     - [Stitches](https://stitches.dev/)
     - [PrimeReact](https://www.primefaces.org/primereact-v5/)
     - [Phosphoricons](https://phosphoricons.com/)
-    - JSON Server
+    - [JSON-Server](https://www.npmjs.com/package/json-server)
 ### Requisitos Funcionais:  
 - Página Principal:
     - [x] Deve possuir um botão para cadastrar novas transações.
