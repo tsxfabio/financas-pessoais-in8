@@ -6,7 +6,7 @@ export const DashboardContainer = styled('div', {
   justifyContent: 'space-between',
   alignItems: 'center',
   maxWidth: '1140px',
-  margin: '-50px auto',
+  // margin: '0 auto',
   // backgroundColor: '$pink600',
 })
 
