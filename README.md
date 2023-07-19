@@ -24,7 +24,7 @@ O desafio deve ser enviado [AQUI](https://docs.google.com/forms/d/e/1FAIpQLSdZA8
     - ReactJS
     - NextJS 13
     - [Stitches](https://stitches.dev/)
-    - [RadixUI](https://www.radix-ui.com/)
+    - [PrimeReact](https://www.primefaces.org/primereact-v5/)
     - JSON Server
 ### Requisitos Funcionais:  
 - Página Principal:
