@@ -1,0 +1,18 @@
+{
+    "transacoes": [
+        {
+            "id": 1,
+            "name": "Transação 1",
+            "categoria": "Categoria 1",
+            "date": "20/07/2023",
+            "valor": 1000.00
+        },
+        {
+            "id": 2,
+            "name": "Transação 2",
+            "categoria": "Categoria 2",
+            "date": "20/07/2023",
+            "valor": -500.00
+        }
+    ]
+}

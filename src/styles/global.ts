@@ -16,4 +16,9 @@ export const globalStyles = globalCss({
     fontSize: '1rem',
     fontWeight: 400,
   },
+
+  table: {
+    borderCollapse: 'collapse',
+    borderSpacing: 0,
+  },
 })

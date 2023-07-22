@@ -5,7 +5,7 @@ export const HeaderContainer = styled('header', {
   height: '220px',
   backgroundColor: '$gray200',
 
-  div: {
+  '.MainContainer': {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -13,6 +13,14 @@ export const HeaderContainer = styled('header', {
     maxWidth: '1140px',
     padding: '2.5rem 0',
     margin: '0 auto',
+  },
+
+  '.LogoContainer': {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'start',
+    alignItems: 'center',
+
     // backgroundColor: '$pink800',
 
     span: {

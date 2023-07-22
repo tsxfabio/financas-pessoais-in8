@@ -1,11 +1,12 @@
 import Image from 'next/image'
 import { HeaderContainer, NewTransactionButton } from './styles'
+import DialogModal from '../Modal'
 
 export default function Header() {
   return (
     <HeaderContainer>
-      <div>
-        <span>
+      <div className="MainContainer">
+        <div className="LogoContainer">
           <Image
             src="https://in8.com.br/wp-content/themes/IN8/assets/images/logo.svg"
             alt="logo"
@@ -13,8 +14,8 @@ export default function Header() {
             height={50}
           />
           Finance
-        </span>
-        <NewTransactionButton>Nova Transação</NewTransactionButton>
+        </div>
+        <DialogModal />
       </div>
     </HeaderContainer>
   )

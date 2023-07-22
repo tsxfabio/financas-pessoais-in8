@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:server": "json-server ./src/database/database.json -p 3333 -w -d 500",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -11,10 +12,13 @@
   "dependencies": {
     "@phosphor-icons/react": "^2.0.10",
     "@stitches/react": "^1.2.8",
+    "@types/json-server": "^0.14.4",
     "@types/node": "20.4.2",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
+    "axios": "^1.4.0",
     "eslint-config-next": "13.4.10",
+    "json-server": "^0.17.3",
     "next": "13.4.10",
     "primereact": "^9.6.0",
     "react": "18.2.0",
