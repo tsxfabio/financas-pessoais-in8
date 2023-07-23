@@ -1,10 +1,23 @@
 import React, { useState } from 'react'
-import { Button } from 'primereact/button'
 import { Dialog } from 'primereact/dialog'
-import { ModalContainer, NewTransactionButton } from './styles'
+import { InputText } from 'primereact/inputtext'
+import { Dropdown, DropdownChangeEvent } from 'primereact/dropdown'
+import { SelectButton, SelectButtonChangeEvent } from 'primereact/selectbutton'
+import { FormContainer, ModalContainer, NewTransactionButton } from './styles'
 
 export default function DialogModal() {
+  const transactionType: string[] = ['Entrada', 'Saída']
+  const [selectedTransactionType, setSelectedTransactionType] =
+    useState<string>(transactionType[0])
   const [visible, setVisible] = useState<boolean>(false)
+  const [selectedCategory, setSelectedCategory] = useState<string>('')
+  const [categoryList, setCategoryList] = useState<string[]>([
+    'Alimentação',
+    'Lazer',
+    'Moradia',
+    'Salário',
+    'Outros',
+  ])
 
   return (
     <ModalContainer>
@@ -12,20 +25,46 @@ export default function DialogModal() {
         Nova Transação
       </NewTransactionButton>
       <Dialog
-        header="Header"
+        header="Nova Transação"
         visible={visible}
-        style={{ width: '50vw' }}
+        style={{ width: '25vw' }}
         onHide={() => setVisible(false)}
+        position="top"
       >
-        <p className="m-0">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <form>
+          <FormContainer>
+            <InputText
+              keyfilter="alpha"
+              placeholder="Descrição"
+              className="InputText"
+            />
+            <InputText
+              keyfilter="money"
+              placeholder="Valor"
+              className="InputText"
+            />
+            <Dropdown
+              value={selectedCategory}
+              options={categoryList}
+              onChange={(e: DropdownChangeEvent) =>
+                setSelectedCategory(e.value)
+              }
+              placeholder="Selecione a Categoria"
+            />
+            <SelectButton
+              pt={{
+                root: { className: 'SelectContainer' },
+                button: { className: 'SelectButton' },
+              }}
+              value={selectedTransactionType}
+              onChange={(e: SelectButtonChangeEvent) =>
+                setSelectedTransactionType(e.value)
+              }
+              options={transactionType}
+            />
+            <NewTransactionButton type="submit">Cadastrar</NewTransactionButton>
+          </FormContainer>
+        </form>
       </Dialog>
     </ModalContainer>
   )
