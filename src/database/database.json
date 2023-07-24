@@ -1,39 +1,18 @@
 {
   "transactions": [
     {
-      "description": "Salário",
+      "description": "Salário 01/2023",
       "value": 3500,
       "category": "Salário",
       "createdAt": "24/07/2023",
       "id": 1
     },
     {
-      "description": "Faculdade",
-      "value": -1900,
-      "category": "Educação",
+      "description": "Aluguel",
+      "value": -1500,
+      "category": "Moradia",
       "createdAt": "24/07/2023",
       "id": 2
-    },
-    {
-      "description": "Aluguel",
-      "value": -1200,
-      "category": "Moradia",
-      "createdAt": "24/07/2023",
-      "id": 3
-    },
-    {
-      "description": "Mercado",
-      "value": -350,
-      "category": "Alimentação",
-      "createdAt": "24/07/2023",
-      "id": 4
-    },
-    {
-      "description": "Internet",
-      "value": -107.55,
-      "category": "Moradia",
-      "createdAt": "24/07/2023",
-      "id": 5
     }
   ]
 }

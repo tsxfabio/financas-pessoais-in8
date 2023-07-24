@@ -43,6 +43,7 @@ export default function DialogModal() {
       defaultValues: {
         description: '',
         transactionType: 'Entrada',
+        value: 0,
       },
     },
   )

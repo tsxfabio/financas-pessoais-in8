@@ -10,17 +10,22 @@ export const InputTextContainer = styled('form', {
     padding: '0.5rem',
     width: '80%',
     borderRadius: 6,
-    backgroundColor: '$gray200',
+    backgroundColor: '$white',
     color: '$pink600',
-    border: '1px solid transparent',
+    border: '1px solid $pink600',
 
     '&::placeholder': {
       color: '$pink600',
-      fontSize: '0.75rem',
+      fontSize: '.875rem',
     },
 
-    '&:focus': {
-      outline: '2px solid $pink600',
+    '&:not(disabled):hover': {
+      borderColor: '$pink600',
+    },
+
+    '&:not(disabled):focus': {
+      boxShadow: 'none',
+      borderColor: '$pink600',
     },
   },
 })
@@ -33,7 +38,7 @@ export const InputTextButton = styled('button', {
   borderRadius: 6,
   border: '1px solid $pink600',
   color: '$pink600',
-  backgroundColor: 'transparent',
+  backgroundColor: '$white',
   cursor: 'pointer',
   transition: '0.5s',
 
