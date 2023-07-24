@@ -1,30 +1,62 @@
 import React, { useState } from 'react'
+import { classNames } from 'primereact/utils'
+import { SelectButton, SelectButtonChangeEvent } from 'primereact/selectbutton'
 import { Dialog } from 'primereact/dialog'
 import { InputText } from 'primereact/inputtext'
 import { Dropdown } from 'primereact/dropdown'
-import { SelectButton, SelectButtonChangeEvent } from 'primereact/selectbutton'
 import { FormContainer, ModalContainer, NewTransactionButton } from './styles'
 import { Controller, useForm } from 'react-hook-form'
-import { classNames } from 'primereact/utils'
+import { z } from 'zod'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { InputNumber } from 'primereact/inputnumber'
+import { api } from '@/src/lib/server'
+import moment from 'moment'
+
+const ModalSchema = z.object({
+  description: z.string().nonempty(),
+  value: z.number().positive(),
+  category: z.string().nonempty(),
+  transactionType: z.enum(['Entrada', 'Saída']),
+})
+
+type inputModalSchema = z.infer<typeof ModalSchema>
 
 export default function DialogModal() {
-  const { control, handleSubmit, register } = useForm()
   const transactionType: string[] = ['Entrada', 'Saída']
-  const [visible, setVisible] = useState<boolean>(false)
-  const [categoryList, setCategoryList] = useState<string[]>([
+  const categoryList: string[] = [
     'Alimentação',
+    'Educação',
     'Lazer',
     'Moradia',
     'Salário',
+    'Saúde',
+    'Transporte',
     'Outros',
-  ])
+  ]
+  const [visible, setVisible] = useState<boolean>(false)
 
-  // Formulário
-  const [selectedTransactionType, setSelectedTransactionType] =
-    useState<string>(transactionType[0])
+  const { control, handleSubmit, register, reset, formState } =
+    useForm<inputModalSchema>({
+      resolver: zodResolver(ModalSchema),
+      defaultValues: {
+        description: '',
+        transactionType: 'Entrada',
+        value: 0,
+      },
+    })
 
-  function onSubmit(data: any) {
-    console.log(data)
+  async function handleCreateNewTransaction(data: inputModalSchema) {
+    const { description, value, category, transactionType } = data
+
+    await api.post('/transactions', {
+      description,
+      value: transactionType === 'Entrada' ? value : value * -1,
+      category,
+      createdAt: moment().locale('pt-br').format('DD/MM/YYYY'),
+    })
+
+    reset()
+    setVisible(false)
   }
 
   return (
@@ -39,19 +71,36 @@ export default function DialogModal() {
         onHide={() => setVisible(false)}
         position="top"
       >
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(handleCreateNewTransaction)}>
           <FormContainer>
-            <InputText
-              keyfilter="alpha"
-              placeholder="Descrição"
-              className="InputText"
-              {...register('description')}
+            <Controller
+              name="description"
+              control={control}
+              render={({ field, fieldState }) => (
+                <InputText
+                  id={field.name}
+                  value={field.value}
+                  placeholder="Descrição"
+                  className={classNames({ 'p-invalid': fieldState.error })}
+                  onChange={(e) => field.onChange(e.target.value)}
+                />
+              )}
             />
-            <InputText
-              keyfilter="money"
-              placeholder="Valor"
-              className="InputText"
-              {...register('value')}
+            <Controller
+              name="value"
+              control={control}
+              render={({ field, fieldState }) => (
+                <InputNumber
+                  id={field.name}
+                  inputRef={field.ref}
+                  value={field.value}
+                  onBlur={field.onBlur}
+                  onValueChange={(e) => field.onChange(e)}
+                  inputClassName={classNames({ 'p-invalid': fieldState.error })}
+                  minFractionDigits={2}
+                  maxFractionDigits={2}
+                />
+              )}
             />
             <Controller
               name="category"
@@ -83,14 +132,6 @@ export default function DialogModal() {
                 />
               )}
             />
-
-            <SelectButton
-              value={selectedTransactionType}
-              onChange={(e: SelectButtonChangeEvent) =>
-                setSelectedTransactionType(e.value)
-              }
-            />
-
             <NewTransactionButton type="submit">Cadastrar</NewTransactionButton>
           </FormContainer>
         </form>

@@ -25,6 +25,7 @@ O desafio deve ser enviado [AQUI](https://docs.google.com/forms/d/e/1FAIpQLSdZA8
     - [NextJS 13](https://nextjs.org/)
     - [Stitches](https://stitches.dev/)
     - [React Hook Form](https://www.react-hook-form.com/)
+    - [Zod](https://zod.dev/?id=ecosystem)
     - [PrimeReact](https://www.primefaces.org/primereact-v5/)
     - [Phosphoricons](https://phosphoricons.com/)
     - [JSON-Server](https://www.npmjs.com/package/json-server)
