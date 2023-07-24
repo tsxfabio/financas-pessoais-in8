@@ -1,3 +1,4 @@
+import { TransactionsContext } from '@/src/contexts/TransactionsContextType'
 import { DashboardCard, DashboardContainer } from './styles'
 
 export default function Dashboard() {

@@ -1,6 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 import { getCssText } from '../styles'
-import Header from '../components/Header'
 
 export default function Document() {
   return (

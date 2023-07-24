@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { classNames } from 'primereact/utils'
-import { SelectButton, SelectButtonChangeEvent } from 'primereact/selectbutton'
+import { SelectButton } from 'primereact/selectbutton'
 import { Dialog } from 'primereact/dialog'
 import { InputText } from 'primereact/inputtext'
 import { Dropdown } from 'primereact/dropdown'
@@ -11,6 +11,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { InputNumber } from 'primereact/inputnumber'
 import { api } from '@/src/lib/server'
 import moment from 'moment'
+import { TransactionsContext } from '@/src/contexts/TransactionsContextType'
 
 const ModalSchema = z.object({
   description: z.string().nonempty(),
@@ -22,6 +23,7 @@ const ModalSchema = z.object({
 type inputModalSchema = z.infer<typeof ModalSchema>
 
 export default function DialogModal() {
+  const { getTransactions } = useContext(TransactionsContext)
   const transactionType: string[] = ['Entrada', 'Saída']
   const categoryList: string[] = [
     'Alimentação',
@@ -35,15 +37,16 @@ export default function DialogModal() {
   ]
   const [visible, setVisible] = useState<boolean>(false)
 
-  const { control, handleSubmit, register, reset, formState } =
-    useForm<inputModalSchema>({
+  const { control, handleSubmit, reset, formState } = useForm<inputModalSchema>(
+    {
       resolver: zodResolver(ModalSchema),
       defaultValues: {
         description: '',
         transactionType: 'Entrada',
         value: 0,
       },
-    })
+    },
+  )
 
   async function handleCreateNewTransaction(data: inputModalSchema) {
     const { description, value, category, transactionType } = data
@@ -57,6 +60,7 @@ export default function DialogModal() {
 
     reset()
     setVisible(false)
+    getTransactions()
   }
 
   return (

@@ -1,53 +1,46 @@
 {
   "transactions": [
     {
-      "id": 1,
-      "name": "Transação 1",
-      "categoria": "Categoria 1",
-      "date": "20/07/2023",
-      "valor": 1000
-    },
-    {
-      "id": 2,
-      "name": "Transação 2",
-      "categoria": "Categoria 2",
-      "date": "20/07/2023",
-      "valor": -500
-    },
-    {
-      "description": "Salário 07/2023",
-      "value": 3500,
-      "category": "Salário",
-      "createdAt": "2023-07-24T05:56:55.546Z",
-      "id": 3
-    },
-    {
-      "description": "Zé Delivery",
-      "value": -85.5,
-      "category": "Alimentação",
-      "createdAt": "2023-07-24T05:57:58.776Z",
-      "id": 4
-    },
-    {
-      "description": "Salário 08/2023",
-      "value": 3500,
-      "category": "Salário",
-      "createdAt": "Mon Jul 24 2023",
-      "id": 5
-    },
-    {
-      "description": "Salário 09/2023",
-      "value": 3500,
-      "category": "Salário",
-      "createdAt": "07/24/2023",
-      "id": 6
-    },
-    {
-      "description": "Salário 10/2023",
+      "description": "Salário 01/2023",
       "value": 3500,
       "category": "Salário",
       "createdAt": "24/07/2023",
-      "id": 7
+      "id": 1
+    },
+    {
+      "description": "Faculdade 01/2023",
+      "value": -900,
+      "category": "Educação",
+      "createdAt": "24/07/2023",
+      "id": 2
+    },
+    {
+      "description": "Curso de Inglês",
+      "value": -159.5,
+      "category": "Educação",
+      "createdAt": "24/07/2023",
+      "id": 3
+    },
+    {
+      "description": "Salário 02/2023",
+      "value": 3500,
+      "category": "Salário",
+      "createdAt": "24/07/2023",
+      "id": 4
+    },
+    {
+      "description": "Faculdade 02/2023",
+      "value": -900,
+      "category": "Educação",
+      "createdAt": "24/07/2023",
+      "id": 5
+    },
+    {
+      "description": "Curso de Inglês 02/2023",
+      "value": -159.5,
+      "category": "Educação",
+      "createdAt": "24/07/2023",
+      "id": 6
     }
   ]
 }
