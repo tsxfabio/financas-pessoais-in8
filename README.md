@@ -25,7 +25,7 @@ O desafio deve ser enviado [AQUI](https://docs.google.com/forms/d/e/1FAIpQLSdZA8
 - Acessar a aplicação através do link http://localhost:3000/ 
 
 ### Referência de Estilo:  
--[Webpage da IN8](https://in8.com.br/)
+[Webpage da IN8](https://in8.com.br/)
 
 ### Especificações Técnicas:  
 - Tecnologias Utilizadas:
