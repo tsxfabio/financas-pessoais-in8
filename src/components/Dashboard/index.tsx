@@ -1,20 +1,29 @@
-import { TransactionsContext } from '@/src/contexts/TransactionsContextType'
 import { DashboardCard, DashboardContainer } from './styles'
+import { useDashboardData } from '@/src/hooks/useDashboardData'
 
 export default function Dashboard() {
+  const dashboardData = useDashboardData()
+
+  function currencyFormat(value: number) {
+    return new Intl.NumberFormat('pt-br', {
+      style: 'currency',
+      currency: 'BRL',
+    }).format(value)
+  }
+
   return (
     <DashboardContainer>
       <DashboardCard colors="pink">
         <span>Entradas</span>
-        <strong>R$ 1.000,00</strong>
+        <strong>{currencyFormat(dashboardData.entradas)}</strong>
       </DashboardCard>
       <DashboardCard colors="pink">
         <span>Saídas</span>
-        <strong>R$ 500,00</strong>
+        <strong>{currencyFormat(dashboardData.saidas)}</strong>
       </DashboardCard>
-      <DashboardCard colors="green">
+      <DashboardCard colors={dashboardData.total >= 0 ? 'green' : 'red'}>
         <span>Saldo</span>
-        <strong>R$ 500,00</strong>
+        <strong>{currencyFormat(dashboardData.total)}</strong>
       </DashboardCard>
     </DashboardContainer>
   )

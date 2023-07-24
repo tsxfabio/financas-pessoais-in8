@@ -43,7 +43,6 @@ export default function DialogModal() {
       defaultValues: {
         description: '',
         transactionType: 'Entrada',
-        value: 0,
       },
     },
   )
@@ -99,6 +98,7 @@ export default function DialogModal() {
                   inputRef={field.ref}
                   value={field.value}
                   onBlur={field.onBlur}
+                  placeholder="Valor"
                   onValueChange={(e) => field.onChange(e)}
                   inputClassName={classNames({ 'p-invalid': fieldState.error })}
                   minFractionDigits={2}

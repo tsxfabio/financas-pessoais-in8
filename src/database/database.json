@@ -1,46 +1,39 @@
 {
   "transactions": [
     {
-      "description": "Salário 01/2023",
+      "description": "Salário",
       "value": 3500,
       "category": "Salário",
       "createdAt": "24/07/2023",
       "id": 1
     },
     {
-      "description": "Faculdade 01/2023",
-      "value": -900,
+      "description": "Faculdade",
+      "value": -1900,
       "category": "Educação",
       "createdAt": "24/07/2023",
       "id": 2
     },
     {
-      "description": "Curso de Inglês",
-      "value": -159.5,
-      "category": "Educação",
+      "description": "Aluguel",
+      "value": -1200,
+      "category": "Moradia",
       "createdAt": "24/07/2023",
       "id": 3
     },
     {
-      "description": "Salário 02/2023",
-      "value": 3500,
-      "category": "Salário",
+      "description": "Mercado",
+      "value": -350,
+      "category": "Alimentação",
       "createdAt": "24/07/2023",
       "id": 4
     },
     {
-      "description": "Faculdade 02/2023",
-      "value": -900,
-      "category": "Educação",
+      "description": "Internet",
+      "value": -107.55,
+      "category": "Moradia",
       "createdAt": "24/07/2023",
       "id": 5
-    },
-    {
-      "description": "Curso de Inglês 02/2023",
-      "value": -159.5,
-      "category": "Educação",
-      "createdAt": "24/07/2023",
-      "id": 6
     }
   ]
 }

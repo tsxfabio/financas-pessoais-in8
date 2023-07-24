@@ -16,7 +16,15 @@
 O desafio deve ser enviado [AQUI](https://docs.google.com/forms/d/e/1FAIpQLSdZA8faSnKPGfW8UH-1XNyluV6VPcGTEdnyP4XmqjlSM1J-Gg/viewform)
 
 ## Solução  
-- Referência de Estilo:  
+
+### Como Rodar a Aplicação:
+- Possuir o NodeJS instalado
+- Instalar as dependências utilizando `npm install`
+- Executar o servidor através do comando `npm run dev:server`
+- Executar a aplicação através do comento `npm run dev`
+- Acessar a aplicação através do link http://localhost:3000/ 
+
+### Referência de Estilo:  
     - [Webpage da IN8](https://in8.com.br/)
 
 ### Especificações Técnicas:  
@@ -34,10 +42,18 @@ O desafio deve ser enviado [AQUI](https://docs.google.com/forms/d/e/1FAIpQLSdZA8
     - [x] Deve possuir um botão para cadastrar novas transações.
     - [x] Deve possuir um dashboard com 3 categorias: Entradas, Saídas e Saldo.
     - [x] Deve apresentar um input para busca.
-    - [ ] Deve apresentar uma lista de transações de acordo com o input de busca. Caso o imput esteja vazio, deve apresentar todas as transações.
-    - [ ] Deve possuir um rodapé com informações do desenvolvedor e finalidade da aplicação.
+    - [x] Deve apresentar uma lista de transações de acordo com o input de busca. Caso o imput esteja vazio, deve apresentar todas as transações.
 - Modal de Transações:
-    - [ ] O sistema deve possuir um modal para adicionar transações.
-    - [ ] O modal deve permitir que usuários consigam aidicionar novas transações, contendo 'Descrição', 'Preço', 'Categoria' e 'Tipo'.
-    - [ ] O modal deve permitir que usuários consigam cadastrar novas categorias de transações.
-    - [ ] O modal deve possuir um botão com a funcionalidade de submeter a transação.
+    - [x] O sistema deve possuir um modal para adicionar transações.
+    - [x] O modal deve permitir que usuários consigam aidicionar novas transações, contendo 'Descrição', 'Valor', 'Categoria' e 'Tipo de Transação'.
+    - [x] O modal deve possuir validação dos dados inseridos.
+    - [x] O modal deve possuir um botão com a funcionalidade de submeter a transação.
+
+### Evidências:
+![evidência 01](./public/evidencias/evidencia01.png)
+
+![evidência 02](./public/evidencias/evidencia02.png)
+
+![evidência 03](./public/evidencias/evidencia03.png)
+
+![evidência 04](./public/evidencias/evidencia04.png)
