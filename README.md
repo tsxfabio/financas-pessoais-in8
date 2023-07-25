@@ -43,6 +43,7 @@ O desafio deve ser enviado [AQUI](https://docs.google.com/forms/d/e/1FAIpQLSdZA8
     - [x] Deve possuir um dashboard com 3 categorias: Entradas, Saídas e Saldo.
     - [x] Deve apresentar um input para busca.
     - [x] Deve apresentar uma lista de transações de acordo com o input de busca. Caso o imput esteja vazio, deve apresentar todas as transações.
+    - [x] Deve ser possível filtrar os dados de acordo com os cabecalhos da tabela (por ordem crescente ou decrescente).
 - Modal de Transações:
     - [x] O sistema deve possuir um modal para adicionar transações.
     - [x] O modal deve permitir que usuários consigam aidicionar novas transações, contendo 'Descrição', 'Valor', 'Categoria' e 'Tipo de Transação'.
@@ -61,3 +62,5 @@ O desafio deve ser enviado [AQUI](https://docs.google.com/forms/d/e/1FAIpQLSdZA8
 ![evidência 05](./public/evidencias/evidencia05.png)
 
 ![evidência 06](./public/evidencias/evidencia06.png)
+
+![evidência 07](./public/evidencias/evidencia07.png)

@@ -15,7 +15,7 @@ interface TransactionsType {
 
 interface TransactionsContextType {
   transactions: TransactionsType[]
-  getTransactions(): Promise<void>
+  getTransactions: (query?: string) => Promise<void>
 }
 
 export const TransactionsContext = createContext({} as TransactionsContextType)
@@ -23,12 +23,17 @@ export const TransactionsContext = createContext({} as TransactionsContextType)
 export function TransactionsProvider({ children }: TransactionsProviderProps) {
   const [transactions, setTransactions] = useState<TransactionsType[]>([])
 
-  async function getTransactions() {
+  async function getTransactions(query?: string) {
     await api
-      .get('/transactions')
+      .get('/transactions', {
+        params: {
+          _sort: 'createdAt',
+          _order: 'desc',
+          q: query,
+        },
+      })
       .then((response) => {
         setTransactions(response.data)
-        console.log(transactions)
       })
       .catch((error) => {
         console.log(error)

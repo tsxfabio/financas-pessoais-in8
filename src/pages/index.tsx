@@ -1,8 +1,8 @@
 import Dashboard from '../components/Dashboard'
 import DataTableComponent from '../components/DataTableComponent'
-import InputText from '../components/InputText'
 import { MainContainer } from '../styles/styles'
 import Header from '../components/Header'
+import SearchForm from '../components/SearchForm'
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
       <Header />
       <MainContainer>
         <Dashboard />
-        <InputText />
+        <SearchForm />
         <DataTableComponent />
       </MainContainer>
     </div>
