@@ -31,6 +31,7 @@ O desafio deve ser enviado [AQUI](https://docs.google.com/forms/d/e/1FAIpQLSdZA8
 - Tecnologias Utilizadas:
     - [ReactJS](https://react.dev/)
     - [NextJS 13](https://nextjs.org/)
+    - [TypeScript](https://www.typescriptlang.org/)
     - [Stitches](https://stitches.dev/)
     - [React Hook Form](https://www.react-hook-form.com/)
     - [Zod](https://zod.dev/?id=ecosystem)
